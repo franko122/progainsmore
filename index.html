@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>  
+<section style="width: 100%; height:100vh; background-color: white; position: fixed; padding:10px; display: none;" id="ener">
+  <button style="padding:10px; width:95%;" id="port">
+    Portuguese
+  </button>
+</section>
 <body style="margin: 0px; background-color: rgb(255, 255, 255); padding:0px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
   <div style="width:100%; position: fixed; background-color: black; display:flex; align-items: center; height:100vh;" id="meto">
     <div style="width:50%; display: flex; justify-content: space-around; height:70px; margin: auto;">
@@ -35,14 +40,21 @@
             <b style="color: rgb(255, 0, 0); display: none;" id="go">X</b>
         </div>
     </nav> 
-    <button style="border:solid gray 2px; width:20%; height: 30px; margin: 10px;">English</button> 
+    <button style="border:solid gray 2px; width:20%; height: 30px; margin: 10px;" id="eng">English</button> 
     <header style="width:100%; height: 243px; background-color:  rgba(18, 7, 172, 0.815) ; background-image: url(/css/robot.jpg); background-blend-mode: multiply; background-size: cover;  background-repeat: no-repeat;">
         <br>
-        <h1 style="font-size: 26px; text-align: center; color: white; ">
-        Welcome to progainsmore
-      </h1> 
-      <p style="color:white; font-size: 13px; text-align: center;">
+        <h1 style="font-size: 26px; text-align: center; color: white; " id="maini">
+          Welcome to progainsmore
+        </h1> 
+        <h1 style="font-size: 26px; text-align: center; color: white; display:none; " id="bem">
+          Bem-vindo ao progainsmore
+        </h1> 
+      <p style="color:white; font-size: 13px; text-align: center;" id="back">
         Trust and reliable way to invest your crypto currency  <br> with capital back
+      </p> 
+      <p style="color:white; font-size: 13px; text-align: center; display: none;" id="com">
+        Maneira confiável e confiável de investir sua moeda criptográfica
+         <br> com capital de volta 
       </p> 
       <div style="width:50%; margin: auto; padding: 10px; justify-content: space-around; display: flex;">
         <button style="width: 40%; height:40px;  outline: none; background-color: rgb(31,18,253); color:white; border:none; font: bold; border-radius: 10px;"><b>Sign-up</b></button>
@@ -288,6 +300,23 @@
     let me = document.getElementById("me");
     let go = document.getElementById("go");
     let meto = document.getElementById("meto");
+    let ener = document.getElementById("ener");
+    let eng = document.getElementById("eng");
+    let port = document.getElementById("port");
+    let bem = document.getElementById("bem");
+    let maini = document.getElementById("maini");
+    let com = document.getElementById("com");
+    let back = document.getElementById("back");
+    port.addEventListener("click",()=>{
+      ener.style.display="none"
+      maini.style.display="none"
+      bem.style.display="block"
+      back.style.display="none"
+      com.style.display="block"
+    })
+    eng.addEventListener("click",()=>{
+      ener.style.display="block"
+    })
     setTimeout(() => {
       meto.style.display="none"
     }, 3000);
@@ -295,14 +324,12 @@
        me.style.height="300px" 
        newt.style.display="none" 
        go.style.display="block"
-    })
-    
+    }) 
     go.addEventListener("click",()=>{  
         me.style.height="0px"
        go.style.display="none"
        newt.style.display="block"
      })
-    }
-    yhem()
+    } yhem() 
 </script>
 </html>
