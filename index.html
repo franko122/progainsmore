@@ -65,16 +65,24 @@
    <section>
       <div style="width: 85%; align-items: center; background-color: rgb(246, 246, 246);  padding: 15px; margin: auto; border-radius: 10px;">
         <br>
-      <div style="display: flex;  height: 25px; ">
-        <img src="/css/chart on.png" alt="" style="width: 30px; ">
+      <div style="display: flex;  height: 25px; "id="pert">
+        <img src="/css/chart on.png" alt="" style="width: 30px; " >
         <b style="margin-left: 20px;  font-size: 20px;">
             TRADING EXPERT
         </b>
       </div>
+      <div style="display: flex;  height: 25px; display: none; " id="trade">
+        <img src="/css/chart on.png" alt="" style="width: 30px; ">
+        <b style="margin-left: 20px;  font-size: 20px;"> 
+           ESPECIALISTA EM NEGOCIAÇÃO
+        </b>
+      </div>
       <br>
-         <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center;">
+         <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center;" id="fund">
             We are expert forex traders, we manage your fund and raise good profit for you.
-         </p>
+         </p> <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center; display:none;" id="voce">
+         Somos traders especializados em forex, gerenciamos seu fundo e geramos bons lucros para você.
+       </p>
          <br>
       </div>
    </section>
@@ -82,15 +90,24 @@
    <section>
     <div style="width: 85%; align-items: center; background-color: rgb(246, 246, 246);  padding: 15px; margin: auto; border-radius: 10px;">
       <br>
-    <div style="display: flex;  height: 25px; ">
+    <div style="display: flex;  height: 25px; " id="secu">
       <img src="/css/fund.png" alt="" style="width: 30px; ">
       <b style="margin-left: 20px;  font-size: 20px;">
         FUND SECURITY
       </b>
     </div>
+    <div style="display: flex; display:none; height: 25px;" id="segu">
+      <img src="/css/fund.png" alt="" style="width: 30px; ">
+      <b style="margin-left: 20px;  font-size: 20px; " > 
+    SEGURANÇA DO FUNDO
+      </b>
+    </div>
     <br>
-       <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center;">
+       <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center;" id="prot">
         We use world best trading securities, our strong firewall protect all user details.
+       </p>
+       <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center; display: none;" id="mundo" >
+        Usamos os melhores títulos de negociação do mundo, nosso forte firewall protege todos os detalhes do usuário.
        </p>
        <br>
     </div>
@@ -99,15 +116,24 @@
  <section>
   <div style="width: 85%; align-items: center; background-color: rgb(246, 246, 246);  padding: 15px; margin: auto; border-radius: 10px;">
     <br>
-  <div style="display: flex;  height: 25px; ">
+  <div style="display: flex;  height: 25px; "  id="vance">
     <img src="/css/key.png" alt="" style="width: 30px; ">
     <b style="margin-left: 20px;  font-size: 20px;">
         ADVANCE TRADERS
     </b>
   </div>
+  <div style="display: flex;  height: 25px; display: none; " id="avan">
+    <img src="/css/key.png" alt="" style="width: 30px; ">
+    <b style="margin-left: 20px;  font-size: 20px;"> 
+  COMERCIANTES AVANÇADOS
+    </b>
+  </div>
   <br>
-     <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center;">
+     <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center;" id="ever">
         This company practice advance trading with best traders you can ever think of
+     </p>
+      <p style="color:rgb(131, 131, 131); font-size: 15px; text-align: center; display:none;" id="pode">
+        Esta empresa pratica negociação avançada com os melhores traders que você pode imaginar
      </p>
      <br>
   </div>
@@ -307,12 +333,37 @@
     let maini = document.getElementById("maini");
     let com = document.getElementById("com");
     let back = document.getElementById("back");
+    let pert = document.getElementById("pert");
+    let trade = document.getElementById("trade");
+    let voce = document.getElementById("voce");
+    let fund = document.getElementById("fund");
+    let secu = document.getElementById("secu");
+    let segu = document.getElementById("segu");
+    let prot = document.getElementById("prot");
+    let mundo = document.getElementById("mundo");
+    let avan = document.getElementById("avan");
+    let vance = document.getElementById("vance");
+    let pode = document.getElementById("pode");
+    let ever = document.getElementById("ever");
     port.addEventListener("click",()=>{
       ener.style.display="none"
       maini.style.display="none"
       bem.style.display="block"
       back.style.display="none"
       com.style.display="block"
+      pert.style.display="none"
+      trade.style.display="block"
+      fund.style.display="none"
+      voce.style.display="block"
+      eng.innerHTML="portuguese"
+      secu.style.display="none"
+      segu.style.display="block"
+      prot.style.display="none"
+      mundo.style.display="block"
+      vance.style.display="none"
+      avan.style.display="block"
+      ever.style.display="none"
+      pode.style.display="block"
     })
     eng.addEventListener("click",()=>{
       ener.style.display="block"
